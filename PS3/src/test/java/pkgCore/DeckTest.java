@@ -24,7 +24,7 @@ public class DeckTest {
 	public void TestDrawSuit() {
 		Deck deck = new Deck();
 		for (int i = 1; i <= 13; i++) {
-			assertEquals(deck.Draw(eSuit.CLUBS).geteSuit(), new Card(eSuit.CLUBS, eRank.THREE).geteSuit());
+			assertEquals(deck.Draw(eSuit.DIAMONDS).geteSuit(), new Card(eSuit.DIAMONDS, eRank.THREE).geteSuit());
 		}
 	}
 	
@@ -32,7 +32,7 @@ public class DeckTest {
 	public void TestDrawRank() {
 		Deck deck = new Deck();
 		for (int i = 1; i <= 4; i++) {
-			assertEquals(deck.Draw(eRank.THREE).geteRank(), new Card(eSuit.CLUBS, eRank.THREE).geteRank());
+			assertEquals(deck.Draw(eRank.THREE).geteRank(), new Card(eSuit.HEARTS, eRank.THREE).geteRank());
 		}
 	}
 	
@@ -48,8 +48,8 @@ public class DeckTest {
 	public void TestDeckSuitCount() {
 		Deck deck = new Deck();
 		for (int i = 13; i > 0; i--) {
-			assertEquals(deck.Count(eSuit.CLUBS), i);
-			deck.Draw(eSuit.CLUBS);
+			assertEquals(deck.Count(eSuit.SPADES), i);
+			deck.Draw(eSuit.SPADES);
 		}
 	}
 
